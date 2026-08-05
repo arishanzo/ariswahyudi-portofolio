@@ -1,5 +1,8 @@
+
 <script setup lang="ts">
 import heroImg from '../assets/hero.png'
+
+import { ref, computed} from 'vue'
 
 const projects = [
   {
@@ -45,41 +48,71 @@ const projects = [
     img: heroImg,
   },
 ]
+
+const categories = ['All', 'Full Stack', 'Frontend', 'Backend', 'UI/UX']
+const activeCategory = ref('All')
+
+const filteredProjects = computed(() =>
+  activeCategory.value === 'All'
+    ? projects
+    : projects.filter(p => p.category === activeCategory.value)
+)
 </script>
 
 <template>
-  <section id="projects" class="projects">
-    <div class="container">
-      <div class="proj-head">
-        <span class="section-tag">Proyek</span>
-        <h2 class="section-title">
-          Proyek <span class="gradient-text">Terpilih</span>
+  <section id="projects" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Heading -->
+      <div class="text-center mb-12">
+        <span class="uppercase tracking-wide text-orange-500 font-semibold">Proyek</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">
+          Proyek <span class="bg-gradient-to-r from-orange-500 to-pink-600 bg-clip-text text-transparent">Terpilih</span>
         </h2>
-        <p class="section-sub">
-          Beberapa proyek yang telah saya kerjakan. Setiap proyek adalah
-          hasil dari dedikasi dan semangat untuk menciptakan yang terbaik.
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+          Beberapa proyek yang telah saya kerjakan. Setiap proyek adalah hasil dari dedikasi dan semangat untuk menciptakan yang terbaik.
         </p>
       </div>
 
-      <div class="projects-grid">
-        <div
-          v-for="(project, i) in projects"
-          :key="i"
-          class="project-card reveal"
+      <!-- Filter kategori -->
+      <div class="flex flex-wrap justify-center gap-4 mb-10">
+        <button
+          v-for="cat in categories"
+          :key="cat"
+          @click="activeCategory = cat"
+          class="px-4 py-2 rounded-lg font-semibold transition"
+          :class="activeCategory === cat 
+            ? 'bg-orange-500 text-white shadow-md' 
+            : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100'"
         >
-          <div class="project-img">
-            <img :src="project.img" :alt="project.title" />
-            <span class="project-cat">{{ project.category }}</span>
+          {{ cat }}
+        </button>
+      </div>
+
+      <!-- Projects grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          v-for="(project, i) in filteredProjects"
+          :key="i"
+          class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:border-orange-500 transition transform hover:-translate-y-1 hover:shadow-xl"
+        >
+          <!-- Image -->
+          <div class="relative aspect-video overflow-hidden">
+            <img :src="project.img" :alt="project.title" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+            <span class="absolute top-4 left-4 px-3 py-1 text-xs font-semibold text-white bg-gradient-to-r from-orange-500 to-pink-600 rounded-full shadow-md">
+              {{ project.category }}
+            </span>
           </div>
-          <div class="project-body">
-            <h3 class="project-title">{{ project.title }}</h3>
-            <p class="project-desc">{{ project.desc }}</p>
-            <div class="project-tags">
-              <span v-for="tag in project.tags" :key="tag" class="tag">
+
+          <!-- Body -->
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-2">{{ project.title }}</h3>
+            <p class="text-gray-600 text-sm mb-4">{{ project.desc }}</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span v-for="tag in project.tags" :key="tag" class="px-3 py-1 text-xs rounded-full bg-gray-100 border border-gray-200 text-gray-700">
                 {{ tag }}
               </span>
             </div>
-            <a href="#" class="project-link" @click.prevent>
+            <a href="#" class="inline-flex items-center gap-2 text-orange-600 font-semibold text-sm hover:gap-3 transition-all">
               Lihat Detail
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <path
@@ -97,112 +130,3 @@ const projects = [
     </div>
   </section>
 </template>
-
-<style scoped>
-.proj-head {
-  text-align: center;
-  margin-bottom: 48px;
-}
-.proj-head .section-tag,
-.proj-head .section-sub {
-  display: flex;
-  justify-content: center;
-}
-.proj-head .section-sub {
-  margin-left: auto;
-  margin-right: auto;
-}
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-.project-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-}
-.project-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--primary);
-  box-shadow: var(--shadow);
-}
-.project-img {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 16/10;
-}
-.project-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s;
-}
-.project-card:hover .project-img img {
-  transform: scale(1.05);
-}
-.project-cat {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: 5px 12px;
-background: rgba(124, 92, 255, 0.9);
-  backdrop-filter: blur(8px);
-  color: #fff;
-  border-radius: 99px;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-.project-body {
-  padding: 22px;
-}
-.project-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.project-desc {
-  color: var(--text);
-  font-size: 0.9rem;
-  margin-bottom: 16px;
-}
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 18px;
-}
-.tag {
-  padding: 4px 12px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 99px;
-  font-size: 0.75rem;
-  color: var(--primary-2);
-}
-.project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--primary-2);
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: gap 0.3s;
-}
-.project-link:hover {
-  gap: 12px;
-}
-
-@media (max-width: 1000px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 650px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-</style>

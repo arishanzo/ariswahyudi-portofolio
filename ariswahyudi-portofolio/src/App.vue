@@ -37,7 +37,6 @@ onMounted(() => {
     <Skills />
     <Experience />
     <Projects />
-    <Contact />
   </main>
   <Footer />
 </template>
