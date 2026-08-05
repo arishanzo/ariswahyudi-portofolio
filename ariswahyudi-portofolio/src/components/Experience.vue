@@ -30,7 +30,7 @@ const items = [
 
 
 <template>
-  <section id="experience" class="py-8 bg-gray-50">
+  <section id="experience" class="py-8 ">
     <div class="max-w-6xl mx-auto px-6">
       <!-- Heading -->
       <div class="text-start mb-12">

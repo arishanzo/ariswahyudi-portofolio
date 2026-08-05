@@ -60,7 +60,7 @@ const filteredProjects = computed(() =>
 </script>
 
 <template>
-  <section id="projects" class="py-20 bg-gray-50">
+  <section id="projects" class="py-20 ">
     <div class="max-w-7xl mx-auto px-6">
       <!-- Heading -->
       <div class="text-center mb-12">

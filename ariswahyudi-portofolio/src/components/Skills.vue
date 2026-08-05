@@ -41,7 +41,7 @@ const activeCategory = ref<Category>('Frontend')
 </script>
 
 <template>
-  <section id="skills" class="skills mb-10 md:py-20 bg-gray-50">
+  <section id="skills" class="skills mb-10 md:py-20 ">
     <div class="container max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-12">
       
       <!-- Sidebar kategori -->

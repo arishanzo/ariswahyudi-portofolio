@@ -59,7 +59,7 @@ onMounted(async () => {
 
 <template>
 
-  <section id="github" class="md:mb-28 mb-16 bg-gray-50">
+  <section id="github" class="md:mb-28 mb-16">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <h2 class="md:text-3xl text-xl font-bold mb-2">Aktivitas GitHub Saya</h2>
       <p class="text-gray-600 mb-8">
