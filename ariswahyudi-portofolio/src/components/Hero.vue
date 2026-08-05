@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import heroImg from '../assets/image.png'
 import { Icon } from '@iconify/vue'
 
-const roles = ['Full Stack Developer', 'Frontend Engineer', 'UI Enthusiast']
+const roles = ['Full Stack Developer', 'Software Engineer', 'IT Consultant']
 const typed = ref('')
 const roleIndex = ref(0)
 const charIndex = ref(0)
@@ -34,7 +34,7 @@ const typeLoop = () => {
 onMounted(() => typeLoop())
 onUnmounted(() => window.clearTimeout(timer))
 </script><template>
-  <section id="home" class="relative bg-white text-gray-900 py-20">
+  <section id="home" class="relative bg-white text-gray-900 py-16 md:py-20 ">
     <div class="container mx-auto flex flex-col items-center text-center">
 
       <!-- Hero Image -->
@@ -77,7 +77,7 @@ onUnmounted(() => window.clearTimeout(timer))
       </div>
 
       <!-- Social Media Icons -->
-     <div class="flex gap-6 mt-4 text-2xl">
+     <div class="flex gap-6  text-2xl">
     <a href="https://github.com/username" target="_blank" class="text-gray-500 hover:text-black transition">
       <Icon icon="mdi:github" />
     </a>
