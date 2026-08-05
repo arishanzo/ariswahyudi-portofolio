@@ -20,10 +20,10 @@ const items = [
     company: 'CV. Caraka Abadi',
     desc: 'Mengembangkan aplikasi Inventory Management untuk digitalisasi proses pengelolaan stok barang perusahaan.Membangun fitur manajemen stok, barang masuk, barang keluar, serta perhitungan laba dan rugi' },
   {
-    period: '2018 - 2020',
-    role: 'Sarjana Teknik Informatika',
-    company: 'Universitas',
-    desc: 'Mendapatkan gelar sarjana di bidang Teknik Informatika dengan fokus pada pengembangan web dan basis data.',
+    period: 'Desember 2022 - April 2022',
+    role: 'STAFF IT',
+    company: 'Silmi Fashion',
+    desc: 'Mengembangkan aplikasi Payroll untuk mengotomatisasi perhitungan gaji berdasarkan absensi, lembur, cuti, dan komponen penggajian lainnya. Meningkatkan akurasi perhitungan payroll hingga sekitar 99%',
   },
 ]
 </script>

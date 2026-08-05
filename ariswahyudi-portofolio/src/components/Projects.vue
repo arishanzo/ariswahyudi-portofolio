@@ -1,51 +1,67 @@
 
 <script setup lang="ts">
-import heroImg from '../assets/hero.png'
+
+
+import docsapp from '../assets/docsapp.png'
+import belonjoapp from '../assets/belonjoapp.png'
+import webcompany from '../assets/webcompany.jpg'
+import goopintar from '../assets/goopintar.jpg'
+import myca from '../assets/myca.jpg'
+import silmi from '../assets/silmi.jpg'
+import logistik from '../assets/logistik.jpg'
 
 import { ref, computed} from 'vue'
 
 const projects = [
   {
-    title: 'Aplikasi E-commerce',
+    title: 'Aplikasi E-Dokumen',
     category: 'Full Stack',
-    desc: 'Platform e-commerce lengkap dengan keranjang, pembayaran, dan dashboard admin. Dibangun dengan Vue.js dan Node.js.',
+    desc: 'Platform e-Dokumen lengkap dengan fitur upload, download, dan manajemen dokumen. Dibangun dengan Vue.js dan Node.js.',
     tags: ['Vue', 'Node.js', 'PostgreSQL'],
-    img: heroImg,
+    img: docsapp,
   },
-  {
-    title: 'Dashboard Analitik',
+    {
+    title: 'Landing Page Pallet PT. Indonesia Pallet Logistic',
     category: 'Frontend',
-    desc: 'Dashboard analitik real-time dengan visualisasi data interaktif dan fitur export laporan.',
-    tags: ['Vue', 'Chart.js', 'TypeScript'],
-    img: heroImg,
-  },
-  {
-    title: 'Landing Page Startup',
-    category: 'UI/UX',
-    desc: 'Landing page modern dengan animasi halus dan optimasi performa untuk konversi tinggi.',
-    tags: ['Vue', 'CSS', 'Vite'],
-    img: heroImg,
-  },
-  {
-    title: 'Aplikasi Manajemen Tugas',
-    category: 'Full Stack',
-    desc: 'Aplikasi manajemen tugas kolaboratif dengan fitur real-time dan notifikasi.',
-    tags: ['Vue', 'Firebase', 'Vuex'],
-    img: heroImg,
-  },
-  {
-    title: 'Sistem Reservasi',
-    category: 'Backend',
-    desc: 'Sistem reservasi online dengan API RESTful dan manajemen jadwal otomatis.',
-    tags: ['Node.js', 'MongoDB', 'Express'],
-    img: heroImg,
-  },
-  {
-    title: 'Portofolio Interaktif',
-    category: 'Frontend',
-    desc: 'Website portofolio interaktif dengan animasi scroll dan desain modern yang responsif.',
+    desc: ' Landing page perusahaan Pallet dengan desain responsif dan animasi interaktif untuk meningkatkan pengalaman pengguna.',
     tags: ['Vue', 'TypeScript', 'Vite'],
-    img: heroImg,
+    img: logistik,
+  },
+  
+  {
+    title: 'webcompany PT. Eintio Academic & Technology',
+    category: 'Frontend',
+    desc: ' Website perusahaan modern dengan desain responsif dan animasi interaktif untuk meningkatkan pengalaman pengguna.',
+    tags: ['Vue', 'Chart.js', 'TypeScript'],
+    img: webcompany,
+  },
+  {
+    title: 'Goopintar Les Private',
+    category: 'UI/UX',
+    desc: ' Desain UI/UX untuk platform les privat online dengan fokus pada pengalaman pengguna yang intuitif dan menarik.',
+    tags: ['Vue', 'CSS', 'Vite'],
+    img: goopintar,
+  },
+  {
+    title: 'Myca Les Renang',
+    category: 'Full Stack',
+    desc: 'website pemesanan les renang online dengan fitur manajemen jadwal, pembayaran, dan notifikasi otomatis untuk meningkatkan efisiensi operasional.',
+    tags: ['Vue', 'Firebase', 'Vuex'],
+    img: myca,
+  },
+  {
+    title: 'Aplikasi Payroll Silmi Fashion',
+    category: 'Backend',
+    desc: 'Aplikasi untuk mengotomatisasi perhitungan gaji karyawan berdasarkan absensi, lembur, cuti, dan komponen penggajian lainnya. Meningkatkan akurasi perhitungan payroll hingga sekitar 99%.',
+    tags: ['Node.js', 'MongoDB', 'Express'],
+    img: silmi,
+  },
+{
+    title: 'Aplikasi Belonjo',
+    category: 'Full Stack',
+    desc: 'Aplikasi e-commerce untuk marketplace lokal dengan fitur pencarian, keranjang belanja, dan pembayaran online.',
+    tags: ['Vue', 'Node.js', 'MongoDB'],
+    img: belonjoapp,
   },
 ]
 
@@ -97,7 +113,12 @@ const filteredProjects = computed(() =>
         >
           <!-- Image -->
           <div class="relative aspect-video overflow-hidden">
-            <img :src="project.img" :alt="project.title" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+         <img 
+  :src="project.img" 
+  :alt="project.title" 
+  class="w-full h-full object-contain transition-transform duration-500 hover:scale-105 bg-gray-50"
+/>
+ 
             <span class="absolute top-4 left-4 px-3 py-1 text-xs font-semibold text-white bg-gradient-to-r from-orange-500 to-pink-600 rounded-full shadow-md">
               {{ project.category }}
             </span>
