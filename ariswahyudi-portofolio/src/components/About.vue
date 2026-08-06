@@ -114,7 +114,7 @@ onMounted(async () => {
 
   <!-- Actions -->
   <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-    <a href="https://wa.me/088805317354" 
+    <a  href="https://wa.me/6288805317354" 
        class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition">
       Mari Berkolaborasi
     </a>

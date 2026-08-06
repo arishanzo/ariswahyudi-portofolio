@@ -28,6 +28,8 @@ const projects = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGoRVCediUjrL1lHlyry5gqBbHI9LvXOXkV7QQS8ucRQ&s=10'
     ],
     img: docsapp,
+    github: 'https://github.com/arishanzo/technicaltest-ariswahyudi',
+    link: '',
   },
   {
     title: 'Landing Page Pallet PT. Indonesia Pallet Logistic',
@@ -38,6 +40,8 @@ const projects = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtej9AlTUnNffaTZt0PB7aLL_B5LSGFPgx7XhMY9TDcA&s=10'
     ],
     img: logistik,
+    github: 'https://github.com/arishanzo/ptpallet',
+    link: 'https://indonesiapallet.co.id/',
   },
   {
     title: 'Webcompany PT. Eintio Academic & Technology',
@@ -48,17 +52,21 @@ const projects = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWcH0IulCXWR2cMYC7nnKIsb3buCxDmxaU4YJ9fDoYgg&s=10'
     ],
     img: webcompany,
+    github: 'https://webcompany-fe.vercel.app/',
+    link: 'https://webcompany-fe.vercel.app/',
   },
   {
     title: 'Goopintar Les Private',
-    category: 'UI/UX',
-    desc: 'Desain UI/UX untuk platform les privat online dengan fokus pada pengalaman pengguna yang intuitif dan menarik.',
+    category: 'MicroServices',
+    desc: 'MicroServices untuk platform les privat online dengan fokus pada pengalaman pengguna yang intuitif dan menarik.',
     tags: [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5agxXUSsI3J6nJYssKdxaZEO5xpTCsh4P6U4qKGXH2w&s=10',
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtej9AlTUnNffaTZt0PB7aLL_B5LSGFPgx7XhMY9TDcA&s=10',
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVPQaKN0OpWiL4ISrdz009ZCntJ6UtUuAD6joLmGiUsw&s=10'
     ],
     img: goopintar,
+    github: 'https://github.com/arishanzo/userservicess_gopintar',
+    link: 'https://goopintar.com/',
   },
   {
     title: 'Myca Les Renang',
@@ -71,20 +79,24 @@ const projects = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ2s_kkfY34IHhvPizpBbjhbMXcpmumq9fWe4OxgDvDA&s=10'
     ],
     img: myca,
+    github: 'https://github.com/arishanzo/mycalesrenang',
+    link: 'https://mycalesrenang.com/',
   },
   {
     title: 'Aplikasi Payroll Silmi Fashion',
-    category: 'Backend',
+    category: 'Full Stack',
     desc: 'Aplikasi untuk mengotomatisasi perhitungan gaji karyawan berdasarkan absensi, lembur, cuti, dan komponen penggajian lainnya, meningkatkan akurasi hingga 99%.',
     tags: [
       'https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg',
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVPQaKN0OpWiL4ISrdz009ZCntJ6UtUuAD6joLmGiUsw&s=10'
     ],
     img: silmi,
+    github: 'https://github.com/arishanzo/silmi_payroll--Aplikasi-Gaji-Karyawan',
+    link: '',
   },
   {
     title: 'E-Commerce Sport ON',
-    category: 'Backend',
+    category: 'E-commerce',
     desc: 'Platform e-commerce untuk menjual berbagai macam alat olahraga dengan backend yang aman, scalable, serta mendukung integrasi pembayaran dan manajemen produk.',
     tags: [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR24UV5-wJhPNSF3IgnX2cGbYkiElk3Vzav3OT0Ez5dRA&s=10',
@@ -93,6 +105,8 @@ const projects = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ2s_kkfY34IHhvPizpBbjhbMXcpmumq9fWe4OxgDvDA&s=10'
     ],
     img: sporton,
+    github: 'https://github.com/arishanzo/sporton-fe-vercel-deploy',
+    link: 'https://github.com/arishanzo/sporton-fe-vercel-deploy',
   },
   {
     title: 'Aplikasi Belonjo',
@@ -105,11 +119,13 @@ const projects = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ2s_kkfY34IHhvPizpBbjhbMXcpmumq9fWe4OxgDvDA&s=10'
     ],
     img: belonjoapp,
+    github: 'http://belonjoid.vercel.app/',
+    link: 'http://belonjoid.vercel.app/',
   },
 ];
 
 
-const categories = ['All', 'Landing Page', 'Website App', 'Backend', 'UI/UX']
+const categories = ['All', 'Full Stack', 'Frontend', 'E-commerce', 'MicroServices']
 const activeCategory = ref('All')
 
 const filteredProjects = computed(() =>
@@ -181,19 +197,37 @@ const filteredProjects = computed(() =>
                   class="w-8 h-8 object-contain rounded-md border border-gray-200 bg-white p-1"
                 />
             </div>
-            <a href="#" class="inline-flex items-center gap-2 text-orange-600 font-semibold text-sm hover:gap-3 transition-all">
-              Lihat Detail
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M5 12h14M12 5l7 7-7 7"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
+
+            <div class="flex gap-4">
+  <!-- Tombol GitHub -->
+  <a :href="project.github"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="inline-flex items-center gap-2 text-orange-600 font-semibold text-sm hover:gap-3 transition-all">
+    <!-- Icon GitHub -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" 
+         viewBox="0 0 24 24">
+      <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.6 2.1 2.9 1.5.1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.2a11.8 11.8 0 0 1 6.2 0c2.4-1.5 3.4-1.2 3.4-1.2.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.3 0 4.6-2.7 5.6-5.3 5.9.4.3.8 1 .8 2v3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+    </svg>
+    GitHub
+  </a>
+
+  <!-- Tombol Lihat (icon mata) -->
+  <a :href="project.link"
+     class="inline-flex items-center gap-2 text-gray-600 font-semibold text-sm hover:gap-3 transition-all">
+    <!-- Icon Mata -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" 
+         viewBox="0 0 24 24" stroke="currentColor">
+      <path d="M1.5 12s4-7.5 10.5-7.5S22.5 12 22.5 12s-4 7.5-10.5 7.5S1.5 12 1.5 12Z" 
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="12" cy="12" r="3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Lihat
+  </a>
+</div>
+
+          
+            </div>
         </div>
       </div>
     </div>

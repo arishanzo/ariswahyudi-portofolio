@@ -70,27 +70,35 @@ onUnmounted(() => window.clearTimeout(timer))
            class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold text-white transition">
           Lihat Proyek
         </a>
-        <a href="#contact" 
-           class="inline-flex items-center gap-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition">
-          Hubungi Saya
-        </a>
+
+         <a href="CV_ARIS WAHYUDI" 
+     download
+       class="inline-flex items-center gap-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition">    Download CV
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+      <path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" 
+            stroke="currentColor" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"/>
+    </svg>
+  </a>
       </div>
 
       <!-- Social Media Icons -->
      <div class="flex gap-6  text-2xl">
-    <a href="https://github.com/username" target="_blank" class="text-gray-500 hover:text-black transition">
+    <a href="https://github.com/arishanzo" target="_blank" class="text-gray-500 hover:text-black transition">
       <Icon icon="mdi:github" />
     </a>
     <a href="https://x.com/username" target="_blank" class="text-gray-500 hover:text-black transition">
       <Icon icon="mdi:twitter" /> <!-- X/Twitter -->
     </a>
-    <a href="https://instagram.com/username" target="_blank" class="text-gray-500 hover:text-pink-500 transition">
+    <a href="https://instagram.com/aris.wahyudi86" target="_blank" class="text-gray-500 hover:text-pink-500 transition">
       <Icon icon="mdi:instagram" />
     </a>
-    <a href="https://linkedin.com/in/username" target="_blank" class="text-gray-500 hover:text-blue-600 transition">
+    <a href="https://www.linkedin.com/in/aris-wahyudi-09a729165/" target="_blank" class="text-gray-500 hover:text-blue-600 transition">
       <Icon icon="mdi:linkedin" />
     </a>
-    <a href="https://tiktok.com/@username" target="_blank" class="text-gray-500 hover:text-gray-800 transition">
+    <a href="https://www.tiktok.com/@ariswahyudi.86" target="_blank" class="text-gray-500 hover:text-gray-800 transition">
       <Icon icon="ic:baseline-tiktok" />
     </a>
   </div>
