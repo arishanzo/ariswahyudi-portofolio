@@ -12,6 +12,7 @@
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
     "@iconify/vue": "^5.0.1",
+    "@vueuse/head": "^2.0.0",
     "react-icons": "^5.7.0",
     "vue": "^3.5.40",
     "vue-router": "^4.6.4"

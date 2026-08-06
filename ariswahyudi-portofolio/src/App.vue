@@ -8,6 +8,23 @@ import Experience from './components/Experience.vue'
 import Projects from './components/Projects.vue'
 import Footer from './components/Footer.vue'
 
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: 'E-Commerce Sport ON',
+  meta: [
+    { property: 'og:title', content: 'Aris Portofolio | Full Stack Developer | IT Developer' },
+    { property: 'og:description', content: 'Portofolio yang saya bangun menggunakan Vue Js 3 dengan desain responsive, modern, dan clean serta kumpulan projek yang telah saya selsaikan' },
+    { property: 'og:image', content: 'https://ariswahyudi-portfolio-ten.vercel.app/cover.jpg' },
+    { property: 'og:url', content: 'https://ariswahyudi-portfolio-ten.vercel.app/' },
+    { property: 'og:type', content: 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Aris Portofolio | Full Stack Developer | IT Developer' },
+    { name: 'twitter:description', content: 'Portofolio yang saya bangun menggunakan Vue Js 3 dengan desain responsive, modern, dan clean serta kumpulan projek yang telah saya selsaikan' },
+    { name: 'twitter:image', content: 'https://ariswahyudi-portfolio-ten.vercel.app/cover.jpg' }
+  ]
+})
+
 onMounted(() => {
   const observer = new IntersectionObserver(
     (entries) => {
