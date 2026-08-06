@@ -71,7 +71,7 @@ onUnmounted(() => window.clearTimeout(timer))
           Lihat Proyek
         </a>
 
-         <a href="CV_ARIS WAHYUDI" 
+         <a href="CV_ARIS WAHYUDI.pdf" 
      download
        class="inline-flex items-center gap-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition">    Download CV
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
