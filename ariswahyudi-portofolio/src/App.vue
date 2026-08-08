@@ -11,7 +11,7 @@ import Footer from './components/Footer.vue'
 import { useHead } from '@vueuse/head'
 
 useHead({
-  title: 'E-Commerce Sport ON',
+  title: 'Aris Portofolio | Full Stack Developer | IT Developer',
   meta: [
     { property: 'og:title', content: 'Aris Portofolio | Full Stack Developer | IT Developer' },
     { property: 'og:description', content: 'Portofolio yang saya bangun menggunakan Vue Js 3 dengan desain responsive, modern, dan clean serta kumpulan projek yang telah saya selsaikan' },
