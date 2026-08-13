@@ -16,7 +16,7 @@ const socials = [
   { name: 'GitHub', icon: '🐙', href: 'https://github.com' },
   { name: 'LinkedIn', icon: '💼', href: 'https://linkedin.com' },
   { name: 'Instagram', icon: '📸', href: 'https://instagram.com' },
-  { name: 'Email', icon: '✉️', href: 'mailto:aris@email.com' },
+  { name: 'Email', icon: '✉️', href: 'mailto:ariswahyud86@email.com' },
 ]
 </script>
 
