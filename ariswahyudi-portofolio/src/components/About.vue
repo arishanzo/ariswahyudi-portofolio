@@ -61,21 +61,21 @@ onMounted(async () => {
 
   <section id="github" class="md:mb-28 mb-16">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="md:text-3xl text-xl font-bold mb-2">Aktivitas GitHub Saya</h2>
+      <h2 class="md:text-3xl text-xl font-bold mb-2">My GitHub Activity</h2>
       <p class="text-gray-600 mb-8">
-        {{ contributions?.totalContributions }} kontribusi dalam setahun terakhir
+        {{ contributions?.totalContributions }} contributions in the last year
       </p>
 
-      <!-- Wrapper scrollable -->
+      <!-- Scrollable Wrapper -->
        <div class="overflow-x-auto snap-x snap-mandatory">
-        <!-- Grid kontribusi -->
+        <!-- Contributions Grid -->
         <div class="grid grid-cols-53 gap-1 min-w-5xl mx-auto">
           <template v-for="week in contributions?.weeks" :key="week">
             <template v-for="day in week.contributionDays" :key="day.date">
               <div 
                 class="w-3 h-3 rounded-sm"
                 :style="{ backgroundColor: getColor(day.contributionCount) }"
-                :title="`${day.date}: ${day.contributionCount} kontribusi`"
+                :title="`${day.date}: ${day.contributionCount} contributions`"
               ></div>
             </template>
           </template>
@@ -85,23 +85,23 @@ onMounted(async () => {
   </section>
 
 
-  <section id="about" class=" bg-white mb-18">
+  <section id="about" class=" mb-18">
     <div class="max-w-7xl p-2 mx-auto flex flex-col md:flex-row items-center md:items-start gap-22 md:gap-42 px-6 md:px-12">
 
      
-     <!-- Konten kanan -->
+     <!-- Right Content -->
 <div class="md:w-1/2  text-center md:text-left">
-  <span class="uppercase tracking-wide text-orange-500 font-semibold">Tentang Saya</span>
+  <span class="uppercase tracking-wide text-orange-500 font-semibold">About Me</span>
   <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-12">
-    Profil Singkat
+    Short Profile
     <span class="bg-gradient-to-r from-orange-500 to-pink-600 bg-clip-text text-transparent">
-      Perjalanan Saya
+      My Journey
     </span>
   </h2>
   <p class="text-gray-600 leading-relaxed mb-6 text-justify">
-    Lulusan S1 Teknik Informatika dengan pengalaman lebih dari 3 tahun di pengembangan web. 
-    Berperan sebagai Full Stack Developer, Web Developer, dan IT Staff, saya terbiasa membangun 
-    aplikasi modern menggunakan Next.js, React.js, Express.js, PHP, dan MySQL. 
+    Graduate of Informatics Engineering with more than 3 years of experience in web development. 
+    Working as a Full Stack Developer, Web Developer, and IT Staff, I am used to building 
+    modern applications using Next.js, React.js, Express.js, PHP, and MySQL. 
   </p>
 
   <!-- Highlights -->
@@ -116,12 +116,12 @@ onMounted(async () => {
   <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
     <a  href="https://wa.me/6288805317354" 
        class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition">
-      Mari Berkolaborasi
+      Let’s Collaborate
     </a>
     <a href="#experience" 
        class="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white 
               px-6 py-3 rounded-lg font-semibold transition">
-      Lihat Pengalaman
+      View Experience
     </a>
   </div>
 </div>
@@ -129,31 +129,31 @@ onMounted(async () => {
     <div class="md:w-1/2  md:text-left">
     <h2 class="text-3xl md:text-4xl font-bold mb-3  md:text-left">
       <span class="bg-gradient-to-r from-orange-500 to-pink-600 bg-clip-text text-transparent">
-        Pendidikan
+        Education
       </span>
     </h2>
 
-    <!-- Timeline Pendidikan -->
+    <!-- Education Timeline -->
     <div class="space-y-12">
-      <!-- Pendidikan Formal -->
+      <!-- Formal Education -->
       <div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-6">Pendidikan Formal</h3>
+        <h3 class="text-xl font-semibold text-gray-800 mb-6">Formal Education</h3>
         <div class="relative border-l-4 border-orange-500 pl-8 space-y-8">
           <div class="relative">
             <span class="absolute -left-5 top-0 w-4 h-4 bg-orange-500 rounded-full"></span>
-            <p class="text-gray-700 font-semibold">-S1 Teknik Informatika –Universitas Islam Lamongan (2018–2022)</p>
-            <p class="text-gray-500 text-sm">- Membuat aplikasi sistem perangkingan siswa berprestasi berbasis website menggunakan metode SAW untuk
-            tugas akhir dengan akurasi perhitungan 99%. </p>
+            <p class="text-gray-700 font-semibold">- Bachelor of Informatics Engineering – Universitas Islam Lamongan (2018–2022)</p>
+            <p class="text-gray-500 text-sm">- Built a web-based student ranking system using the SAW method for
+            final project with 99% calculation accuracy. </p>
             <p class="text-gray-500 text-sm">
-            -  Mendapatkan sertifikat Machine Learning dari Dicoding Indonesia sebagai tugas mata kuliah Kecerdasan
-              Buatan, mendapat apresiasi dosen atas penyelesaian lebih awal</p>
+            - Earned a Machine Learning certificate from Dicoding Indonesia as part of the Artificial Intelligence course,
+              received lecturer appreciation for early completion. </p>
           </div>
          </div>
       </div>
 
-      <!-- Pendidikan Non-Formal -->
+      <!-- Non-Formal Education -->
   <div>
-    <h3 class="text-xl font-semibold text-gray-800 mb-6">Pendidikan Non‑Formal</h3>
+    <h3 class="text-xl font-semibold text-gray-800 mb-6">Non‑Formal Education</h3>
     <div class="relative border-l-4 border-pink-500 pl-8 space-y-8">
 
       <!-- FYEP -->
@@ -163,14 +163,13 @@ onMounted(async () => {
           FYEP Web Programming – Kitakerja.id (Jan 2026 - Mar 2026)
         </p>
         <p class="text-gray-400 text-sm">
-           Membuat website landing page ecommerce Sport menggunakan Next.js selama 1 bulan.
-          Menerapkan fitur order, transaction
+           Built a sports ecommerce landing page using Next.js within 1 month.
+          Implemented order and transaction features
           <span v-if="showMoreFYEP">
-          Membuat website landing page ecommerce Sport menggunakan Next.js selama 1 bulan.
-          Menerapkan fitur order, transaction, transfer bank dan admin untuk mengonfirmasi setiap orderan masuk. 
-          Teknologi yang digunakan dalam membangun website landing page ecommerce Sport yaitu untuk next.js,
-          express js, MongoDB untuk database.
-          Deploy website menggunakan Vercel app untuk deploy frontend dan railway untuk deploy backend.
+          Built a sports ecommerce landing page using Next.js within 1 month.
+          Implemented order, transaction, bank transfer, and admin confirmation for each incoming order. 
+          Technologies used: Next.js, Express.js, MongoDB for database.
+          Deployed frontend using Vercel and backend using Railway.
           </span>
         </p>
         <button @click="showMoreFYEP = !showMoreFYEP"
@@ -186,14 +185,14 @@ onMounted(async () => {
           ID CAMP 2024 – Indosat Ooredoo Online (Jul 2024 - Dec 2024)
         </p>
         <p class="text-gray-400 text-sm">
-           Belajar dasar dari HTML, CSS dan JavaScript. sebagai 3 pilar pembentuk website. 
-            Menguasai JavaScript sebagai bahasa pemrograman populer
+           Learned the basics of HTML, CSS and JavaScript as the 3 pillars of web development. 
+            Mastered JavaScript as a popular programming language
           <span v-if="showMoreIDCAMP">
-           Belajar dasar dari HTML, CSS dan JavaScript. sebagai 3 pilar pembentuk website. 
-            Menguasai JavaScript sebagai bahasa pemrograman populer, mulai dari fundamental, sintaks dan fitur ES6,
-            hingga konsep automation test menggunakan framework ternama. 
-            Mengambil materi Bootcamp untuk React Developer dengan materi: dasar pemrograman website, JavaScript,
-            front-end web, dan pembuatan aplikasi React.js.          </span>
+           Learned the basics of HTML, CSS and JavaScript as the 3 pillars of web development. 
+            Mastered JavaScript fundamentals, syntax, ES6 features,
+            and automation testing concepts using well-known frameworks. 
+            Took Bootcamp material for React Developer including: web programming basics, JavaScript,
+            front-end web, and building React.js applications.          </span>
         </p>
         <button @click="showMoreIDCAMP = !showMoreIDCAMP"
                 class="text-pink-500 text-sm font-semibold mt-1 hover:underline">
@@ -208,13 +207,13 @@ onMounted(async () => {
           IT Support Specialist Google – Work In Tech Jatim (Jul 2022 - Dec 2022)
         </p>
         <p class="text-gray-400 text-sm">
-            Menyelesaikan sertifikasi kursus, termasuk Jaringan Komputer, Administrasi Sistem, Sistem Operasi,
-            Dukungan Teknis, dan Keamanan IT. 
+            Completed certification courses including Computer Networking, System Administration, Operating Systems,
+            Technical Support, and IT Security. 
           <span v-if="showMoreGoogle">
-            Menyelesaikan sertifikasi kursus, termasuk Jaringan Komputer, Administrasi Sistem, Sistem Operasi,
-            Dukungan Teknis, dan Keamanan IT. 
-            Menyelesaikan bootcamp IT SUPPORT selama kurang lebih 6 bulan sebelum batas yang ditentukan. 
-            Memberikan pengalaman untuk mempelajari studi kasus yang sering terjadi saat menjadi IT SUPPORT. 
+            Completed certification courses including Computer Networking, System Administration, Operating Systems,
+            Technical Support, and IT Security. 
+            Finished IT SUPPORT bootcamp in about 6 months ahead of schedule. 
+            Gained experience in studying common case studies encountered in IT SUPPORT roles. 
           </span>
         </p>
         <button @click="showMoreGoogle = !showMoreGoogle"

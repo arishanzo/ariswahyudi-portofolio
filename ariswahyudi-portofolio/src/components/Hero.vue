@@ -33,8 +33,10 @@ const typeLoop = () => {
 
 onMounted(() => typeLoop())
 onUnmounted(() => window.clearTimeout(timer))
-</script><template>
-  <section id="home" class="relative bg-white text-gray-900 py-16 md:py-20 ">
+</script>
+
+<template>
+  <section id="home" class="relative text-gray-900 py-16 md:py-20 ">
     <div class="container mx-auto flex flex-col items-center text-center">
 
       <!-- Hero Image -->
@@ -45,7 +47,7 @@ onUnmounted(() => window.clearTimeout(timer))
 
       <!-- Title -->
       <h1 class="text-3xl md:text-5xl font-bold mb-4 md:mt-12 mt-4">
-        Hai, saya 
+        Hi, I’m 
         <span class="bg-gradient-to-r from-orange-500 to-pink-600 bg-clip-text text-transparent">
           Aris Wahyudi
         </span>
@@ -53,60 +55,60 @@ onUnmounted(() => window.clearTimeout(timer))
 
       <!-- Typed text -->
       <p class="text-md md:text-xl text-gray-600 mb-6">
-        <span class="font-medium">Saya seorang </span>
+        <span class="font-medium">I am a </span>
         <span class="text-orange-500 font-semibold">{{ typed }}</span>
         <span class="animate-pulse">|</span>
       </p>
 
       <!-- Description -->
       <p class="md:max-w-2xl max-w-sm p-4 mx-auto text-gray-500 mb-8 leading-relaxed">
-        Saya membangun aplikasi web modern, cepat, dan responsif dengan pengalaman yang luar biasa. 
-        Fokus pada performa, aksesibilitas, dan desain yang bersih.
+        I build modern, fast, and responsive web applications with outstanding user experiences. 
+        Focused on performance, accessibility, and clean design.
       </p>
 
       <!-- Actions -->
       <div class="flex gap-4 mb-12">
         <a href="#projects" 
            class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold text-white transition">
-          Lihat Proyek
+          View Projects
         </a>
 
-      <a href="CV_ARIS WAHYUDI.pdf" 
-   target="_blank"
-   class="inline-flex items-center gap-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition">
-    Review CV
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-      <path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" 
-            stroke="currentColor" 
-            stroke-width="2" 
-            stroke-linecap="round" 
-            stroke-linejoin="round"/>
-    </svg>
-</a>
-
+        <a href="CV_ARIS WAHYUDI.pdf" 
+           target="_blank"
+           class="inline-flex items-center gap-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition">
+          Review CV
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" 
+                  stroke="currentColor" 
+                  stroke-width="2" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"/>
+          </svg>
+        </a>
       </div>
 
       <!-- Social Media Icons -->
-     <div class="flex gap-6  text-2xl">
-    <a href="https://github.com/arishanzo" target="_blank" class="text-gray-500 hover:text-black transition">
-      <Icon icon="mdi:github" />
-    </a>
-    <a href="https://x.com/username" target="_blank" class="text-gray-500 hover:text-black transition">
-      <Icon icon="mdi:twitter" /> <!-- X/Twitter -->
-    </a>
-    <a href="https://instagram.com/aris.wahyudi86" target="_blank" class="text-gray-500 hover:text-pink-500 transition">
-      <Icon icon="mdi:instagram" />
-    </a>
-    <a href="https://www.linkedin.com/in/aris-wahyudi-09a729165/" target="_blank" class="text-gray-500 hover:text-blue-600 transition">
-      <Icon icon="mdi:linkedin" />
-    </a>
-    <a href="https://www.tiktok.com/@ariswahyudi.86" target="_blank" class="text-gray-500 hover:text-gray-800 transition">
-      <Icon icon="ic:baseline-tiktok" />
-    </a>
-  </div>
+      <div class="flex gap-6 text-2xl">
+        <a href="https://github.com/arishanzo" target="_blank" class="text-gray-500 hover:text-black transition">
+          <Icon icon="mdi:github" />
+        </a>
+        <a href="https://x.com/username" target="_blank" class="text-gray-500 hover:text-black transition">
+          <Icon icon="mdi:twitter" /> <!-- X/Twitter -->
+        </a>
+        <a href="https://instagram.com/aris.wahyudi86" target="_blank" class="text-gray-500 hover:text-pink-500 transition">
+          <Icon icon="mdi:instagram" />
+        </a>
+        <a href="https://www.linkedin.com/in/aris-wahyudi-09a729165/" target="_blank" class="text-gray-500 hover:text-blue-600 transition">
+          <Icon icon="mdi:linkedin" />
+        </a>
+        <a href="https://www.tiktok.com/@ariswahyudi.86" target="_blank" class="text-gray-500 hover:text-gray-800 transition">
+          <Icon icon="ic:baseline-tiktok" />
+        </a>
+      </div>
 
     </div>
   </section>
 </template>
+
 
 

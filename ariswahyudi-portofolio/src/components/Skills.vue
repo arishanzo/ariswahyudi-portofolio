@@ -42,7 +42,7 @@ const activeCategory = ref<Category>('Frontend')
 
 <template>
   <section id="skills" class="skills mb-10 md:py-20 ">
-    <div class="container max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-12">
+    <div class="container max-w-6xl mx-auto px-6 md:px-0 flex flex-col md:flex-row gap-12">
       
       <!-- Sidebar kategori -->
       <aside class="md:w-1/4 border-r border-gray-200 pr-6">
@@ -69,7 +69,7 @@ const activeCategory = ref<Category>('Frontend')
           <div
             v-for="skill in skillsByCategory[activeCategory]"
             :key="skill.name"
-            class="skill-card bg-white shadow-md rounded-lg p-4 transition hover:scale-105"
+            class="skill-card shadow-md rounded-lg p-4 transition hover:scale-105"
           >
            <div class="skill-top flex items-center gap-2 mb-2">
             <img :src="skill.icon" :alt="skill.name" class="w-6 h-6 animate-bounce" />
