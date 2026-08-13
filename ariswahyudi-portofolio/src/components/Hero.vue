@@ -71,9 +71,10 @@ onUnmounted(() => window.clearTimeout(timer))
           Lihat Proyek
         </a>
 
-         <a href="CV_ARIS WAHYUDI.pdf" 
-     download
-       class="inline-flex items-center gap-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition">    Download CV
+      <a href="CV_ARIS WAHYUDI.pdf" 
+   target="_blank"
+   class="inline-flex items-center gap-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition">
+    Review CV
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
       <path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" 
             stroke="currentColor" 
@@ -81,7 +82,8 @@ onUnmounted(() => window.clearTimeout(timer))
             stroke-linecap="round" 
             stroke-linejoin="round"/>
     </svg>
-  </a>
+</a>
+
       </div>
 
       <!-- Social Media Icons -->
