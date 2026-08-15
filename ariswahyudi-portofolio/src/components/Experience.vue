@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const items = [
   {
-    period: 'Desenber 2022 - Sekarang',
+    period: 'Desember 2022 - Current',
     role: 'Founder Developer Kilat',
     company: 'Devklit Tech',
     desc: "Initiated projects based on client briefs and designed applications using the Waterfall methodology and CI/CD practices. Conducted application testing and validation before delivering projects to clients. Developed e-commerce applications integrated with the Midtrans payment gateway. Developed various other web applications based on business and organizational requirements. Used React.js and Vue.js for frontend development and Laravel, CodeIgniter, and Express.js for backend development."
