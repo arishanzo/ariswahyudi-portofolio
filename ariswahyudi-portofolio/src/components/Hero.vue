@@ -60,6 +60,20 @@ onUnmounted(() => window.clearTimeout(timer))
         <span class="animate-pulse">|</span>
       </p>
 
+
+        <span class=" tracking-wide text-orange-500 font-semibold flex items-center justify-center md:justify-start gap-2">
+          <!-- Lokasi Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" 
+               fill="none" viewBox="0 0 24 24" 
+               stroke-width="1.5" stroke="currentColor" 
+               class="w-5 h-5 text-orange-500">
+            <path stroke-linecap="round" stroke-linejoin="round" 
+                  d="M12 21c-4.97-6.58-8-10.5-8-14a8 8 0 1116 0c0 3.5-3.03 7.42-8 14z" />
+            <circle cx="12" cy="9" r="2.5" fill="currentColor"/>
+          </svg>
+        <p class="text-gray-900">  Lamongan, East Java </p>
+        </span>
+
       <!-- Description -->
       <p class="md:max-w-2xl max-w-sm p-4 mx-auto text-gray-500 mb-8 leading-relaxed">
         I build modern, fast, and responsive web applications with outstanding user experiences. 
