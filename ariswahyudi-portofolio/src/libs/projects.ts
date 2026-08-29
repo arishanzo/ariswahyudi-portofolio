@@ -86,7 +86,7 @@ export const projects = [
     ],
     img: silmi,
     github: 'https://github.com/arishanzo/silmi_payroll--Aplikasi-Gaji-Karyawan',
-    link: '',
+    link: 'https://youtu.be/u9loMalGqNQ?si=nCKHZHMzgwVxfivL',
   },
   {
     title: 'E-Commerce Sport ON',
