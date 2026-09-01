@@ -100,7 +100,7 @@ export const projects = [
     ],
     img: sporton,
     github: 'https://github.com/arishanzo/sporton-fe-vercel-deploy',
-    link: 'https://github.com/arishanzo/sporton-fe-vercel-deploy',
+    link: 'https://sporton-fe-vercel-deploy-bay.vercel.app/',
   },
   {
     title: 'Belonjo Application',
