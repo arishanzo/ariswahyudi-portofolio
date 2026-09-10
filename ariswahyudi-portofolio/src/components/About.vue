@@ -9,10 +9,10 @@ const showMoreGoogle = ref(false)
 
 
 const highlights = [
-  'Membangun aplikasi web full-stack yang scalable',
-  'Pengalaman dengan Vue.js, Next JS, TypeScript, Node.js, Laravel, Dll',
-  'Desain UI/UX yang modern dan responsif',
-  'Optimasi performa Aplikasi sdan SEO',
+  'Building scalable full-stack web applications',
+  'Experience with Vue.js, Next.js, TypeScript, Node.js, Laravel, etc.',
+  'Modern and responsive UI/UX design',
+  'Application performance optimization and SEO',
 ]
 
 
