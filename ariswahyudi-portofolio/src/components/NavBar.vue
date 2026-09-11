@@ -30,7 +30,7 @@ const setActive = (href: string) => {
 </script>
 <template>
   <header 
-    class="fixed top-6 left-1/2 transform -translate-x-1/2 
+    class="fixed top-6  left-1/2 transform -translate-x-1/2 
            w-full md:max-w-md max-w-[90%] mx-auto
            bg-white/90 backdrop-blur-md shadow-md rounded-2xl px-6 py-3 
            flex items-center justify-center transition-all duration-300 z-50"

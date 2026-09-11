@@ -1,24 +1,18 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 type Category = 'Frontend' | 'Backend' | 'DevOps & Tools'
+type Skill = { name: string; icon: string; level: number }
 
-type Skill = {
-  name: string
-  icon: string
-  level: number
-}
-
-const categories: { name: Category; icon: string }[] = [
-  { name: 'Frontend', icon: '🎨' },
-  { name: 'Backend', icon: '⚙️' },
-  { name: 'DevOps & Tools', icon: '☁️' }
+const categories: { name: Category; icon: string; desc: string }[] = [
+  { name: 'Frontend', icon: '🎨', desc: 'UI & User Experience' },
+  { name: 'Backend', icon: '⚙️', desc: 'Server & API' },
+  { name: 'DevOps & Tools', icon: '☁️', desc: 'Infrastructure & Workflow' }
 ]
 
-
 const skillsByCategory: Record<Category, Skill[]> = {
-  Frontend: [
-    { name: 'Vue.js', icon: 'data:image/png;base64,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', level: 80 },
+ Frontend: [
+   { name: 'Vue.js', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBuH6rON-4JZVXqcx-kpNGrOj0KhtXBTE0nxBg_60g2NUFr7sUQLew8fM&s=10', level: 85},
     { name: 'React.js', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5agxXUSsI3J6nJYssKdxaZEO5xpTCsh4P6U4qKGXH2w&s=10', level: 75 },
     { name: 'Next.js', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR24UV5-wJhPNSF3IgnX2cGbYkiElk3Vzav3OT0Ez5dRA&s=10', level: 70 },
     { name: 'TypeScript', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWcH0IulCXWR2cMYC7nnKIsb3buCxDmxaU4YJ9fDoYgg&s=10', level: 70 },
@@ -36,53 +30,93 @@ const skillsByCategory: Record<Category, Skill[]> = {
   ]
 }
 
-
 const activeCategory = ref<Category>('Frontend')
+
+function levelLabel(level: number) {
+  if (level >= 80) return { text: 'Expert', color: 'text-emerald-600 bg-emerald-50' }
+  if (level >= 65) return { text: 'Advanced', color: 'text-blue-600 bg-blue-50' }
+  return { text: 'Intermediate', color: 'text-orange-600 bg-orange-50' }
+}
 </script>
 
 <template>
-  <section id="skills" class="skills mb-10 md:py-20 ">
-    <div class="container max-w-6xl mx-auto px-6 md:px-0 flex flex-col md:flex-row gap-12">
-      
-      <!-- Sidebar kategori -->
-      <aside class="md:w-1/4 border-r border-gray-200 pr-6">
-        <h3 class="text-lg font-semibold mb-4">Kategori</h3>
-        <ul class="space-y-2">
-          <li v-for="cat in categories" :key="cat.name">
-            <button
-              @click="activeCategory = cat.name"
-              class="w-full text-left px-3 py-2 rounded-lg transition"
-              :class="activeCategory === cat.name 
-                ? 'bg-orange-500 text-white font-semibold' 
-                : 'hover:bg-gray-100 text-gray-700'"
-            >
-              <span class="mr-2">{{ cat.icon }}</span>{{ cat.name }}
-            </button>
-          </li>
-        </ul>
-      </aside>
+  <section id="skills" class="md:py-20 py-2">
+    <div class="container max-w-6xl mx-auto px-6 md:px-0">
 
-      <!-- Konten skill -->
-      <div class="md:w-3/4">
-        <h2 class="text-2xl font-bold mb-6">{{ activeCategory }}</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Header -->
+      <div class="mb-12 text-center">
+        <span class="inline-block text-sm font-semibold tracking-widest text-orange-500 uppercase mb-2">Tech Stack</span>
+        <h2 class="text-4xl font-extrabold text-gray-900">Skills & <span class="bg-gradient-to-r from-orange-500 to-pink-600 bg-clip-text text-transparent">Expertise</span></h2>
+        <p class="mt-3 text-gray-500 max-w-md mx-auto text-sm">Teknologi yang saya gunakan untuk membangun produk digital yang scalable dan modern.</p>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="flex justify-center gap-3 mb-10 flex-wrap">
+        <button
+          v-for="cat in categories"
+          :key="cat.name"
+          @click="activeCategory = cat.name"
+          class="group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border"
+          :class="activeCategory === cat.name
+            ? 'bg-orange-500 text-white border-orange-500 shadow-lg shadow-orange-200'
+            : 'bg-white text-gray-600 border-gray-200 hover:border-orange-300 hover:text-orange-500'"
+        >
+          <span>{{ cat.icon }}</span>
+          <span>{{ cat.name }}</span>
+        </button>
+      </div>
+
+      <!-- Active category subtitle -->
+      <p class="text-center text-xs text-gray-400 mb-8 tracking-wide uppercase">
+        {{ categories.find(c => c.name === activeCategory)?.desc }}
+      </p>
+
+      <!-- Skills Grid -->
+      <Transition name="fade" mode="out-in">
+        <div :key="activeCategory" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
           <div
             v-for="skill in skillsByCategory[activeCategory]"
             :key="skill.name"
-            class="skill-card shadow-md rounded-lg p-4 transition hover:scale-105"
+            class="group relative bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center gap-3"
           >
-           <div class="skill-top flex items-center gap-2 mb-2">
-            <img :src="skill.icon" :alt="skill.name" class="w-6 h-6 animate-bounce" />
-            <span class="skill-name font-semibold text-gray-800">{{ skill.name }}</span>
-          </div>
-            <div class="skill-bar h-2 bg-gray-200 rounded">
-              <div class="skill-fill h-2 bg-gradient-to-r from-orange-500 to-pink-600 rounded"
-                   :style="{ width: skill.level + '%' }"></div>
+            <!-- Icon -->
+            <div class="w-14 h-14 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <img :src="skill.icon" :alt="skill.name" class="w-8 h-8 object-contain" />
             </div>
-            <span class="skill-level text-sm text-gray-600 mt-2 block">{{ skill.level }}%</span>
+
+            <!-- Name -->
+            <span class="font-semibold text-gray-800 text-sm">{{ skill.name }}</span>
+
+            <!-- Progress bar -->
+            <div class="w-full">
+              <div class="flex justify-between text-xs text-gray-400 mb-1">
+                <span>Proficiency</span>
+                <span class="font-semibold text-gray-600">{{ skill.level }}%</span>
+              </div>
+              <div class="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                <div
+                  class="h-full bg-gradient-to-r from-orange-400 to-pink-500 rounded-full transition-all duration-700"
+                  :style="{ width: skill.level + '%' }"
+                />
+              </div>
+            </div>
+
+            <!-- Level badge -->
+            <span
+              class="text-xs font-semibold px-2.5 py-0.5 rounded-full"
+              :class="levelLabel(skill.level).color"
+            >
+              {{ levelLabel(skill.level).text }}
+            </span>
           </div>
         </div>
-      </div>
+      </Transition>
     </div>
   </section>
 </template>
+
+<style scoped>
+.fade-enter-active, .fade-leave-active { transition: opacity 0.25s ease, transform 0.25s ease; }
+.fade-enter-from { opacity: 0; transform: translateY(10px); }
+.fade-leave-to   { opacity: 0; transform: translateY(-6px); }
+</style>

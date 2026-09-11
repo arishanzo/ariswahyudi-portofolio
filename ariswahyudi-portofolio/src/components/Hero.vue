@@ -36,86 +36,78 @@ onUnmounted(() => window.clearTimeout(timer))
 </script>
 
 <template>
-  <section id="home" class="relative text-gray-900 py-16 md:py-20 ">
+  <section id="home" class="relative text-gray-900 py-32 md:py-32">
     <div class="container mx-auto flex flex-col items-center text-center">
 
       <!-- Hero Image -->
       <div class="relative">
-        <img :src="heroImg" alt="Aris Wahyudi" 
-             class="w-38 h-38 md:w-48 md:h-48 rounded-full border-4 border-gray-200 shadow-lg" />
+        <img :src="heroImg" alt="Aris Wahyudi"
+             class="w-38 h-38 md:w-48 md:h-48 rounded-full border-4 border-white shadow-xl" />
       </div>
 
       <!-- Title -->
       <h1 class="text-3xl md:text-5xl font-bold mb-4 md:mt-12 mt-4">
-        Hi, I’m 
+        Hi, I'm
         <span class="bg-gradient-to-r from-orange-500 to-pink-600 bg-clip-text text-transparent">
           Aris Wahyudi
         </span>
       </h1>
 
       <!-- Typed text -->
-      <p class="text-md md:text-xl text-gray-600 mb-6">
+      <p class="text-md md:text-xl text-gray-700 mb-6">
         <span class="font-medium">I am a </span>
         <span class="text-orange-500 font-semibold">{{ typed }}</span>
         <span class="animate-pulse">|</span>
       </p>
 
-
-        <span class=" tracking-wide text-orange-500 font-semibold flex items-center justify-center md:justify-start gap-2">
-          <!-- Lokasi Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" 
-               fill="none" viewBox="0 0 24 24" 
-               stroke-width="1.5" stroke="currentColor" 
-               class="w-5 h-5 text-orange-500">
-            <path stroke-linecap="round" stroke-linejoin="round" 
-                  d="M12 21c-4.97-6.58-8-10.5-8-14a8 8 0 1116 0c0 3.5-3.03 7.42-8 14z" />
-            <circle cx="12" cy="9" r="2.5" fill="currentColor"/>
-          </svg>
-        <p class="text-gray-900">  Lamongan, East Java </p>
-        </span>
+      <span class="tracking-wide text-orange-500 font-semibold flex items-center justify-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+             stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 21c-4.97-6.58-8-10.5-8-14a8 8 0 1116 0c0 3.5-3.03 7.42-8 14z" />
+          <circle cx="12" cy="9" r="2.5" fill="currentColor"/>
+        </svg>
+        <p class="text-gray-800">Lamongan, East Java</p>
+      </span>
 
       <!-- Description -->
-      <p class="md:max-w-2xl max-w-sm p-4 mx-auto text-gray-500 mb-8 leading-relaxed">
-        I build modern, fast, and responsive web applications with outstanding user experiences. 
+      <p class="md:max-w-2xl max-w-sm p-4 mx-auto text-gray-600 mb-8 leading-relaxed">
+        I build modern, fast, and responsive web applications with outstanding user experiences.
         Focused on performance, accessibility, and clean design.
       </p>
 
       <!-- Actions -->
       <div class="flex gap-4 mb-12">
-        <a href="#projects" 
-           class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold text-white transition">
+        <a href="#projects"
+           class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold text-white transition shadow-lg">
           View Projects
         </a>
-
-        <a href="CV_ARIS WAHYUDI.pdf" 
-           target="_blank"
-           class="inline-flex items-center gap-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition">
+        <a href="CV_ARIS WAHYUDI.pdf" target="_blank"
+           class="inline-flex items-center gap-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition bg-white/70 backdrop-blur-sm shadow-lg">
           Review CV
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" 
-                  stroke="currentColor" 
-                  stroke-width="2" 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round"/>
+            <path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"
+                  stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
       </div>
 
       <!-- Social Media Icons -->
       <div class="flex gap-6 text-2xl">
-        <a href="https://github.com/arishanzo" target="_blank" class="text-gray-500 hover:text-black transition">
+        <a href="https://github.com/arishanzo" target="_blank" class="text-gray-600 hover:text-black transition">
           <Icon icon="mdi:github" />
         </a>
-        <a href="https://x.com/username" target="_blank" class="text-gray-500 hover:text-black transition">
-          <Icon icon="mdi:twitter" /> <!-- X/Twitter -->
+        <a href="https://x.com/username" target="_blank" class="text-gray-600 hover:text-black transition">
+          <Icon icon="mdi:twitter" />
         </a>
-        <a href="https://instagram.com/aris.wahyudi86" target="_blank" class="text-gray-500 hover:text-pink-500 transition">
+        <a href="https://instagram.com/aris.wahyudi86" target="_blank" class="text-gray-600 hover:text-pink-500 transition">
           <Icon icon="mdi:instagram" />
         </a>
-        <a href="https://www.linkedin.com/in/aris-wahyudi-09a729165/" target="_blank" class="text-gray-500 hover:text-blue-600 transition">
+        <a href="https://www.linkedin.com/in/aris-wahyudi-09a729165/" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
           <Icon icon="mdi:linkedin" />
         </a>
-        <a href="https://www.tiktok.com/@ariswahyudi.86" target="_blank" class="text-gray-500 hover:text-gray-800 transition">
+        <a href="https://www.tiktok.com/@ariswahyudi.86" target="_blank" class="text-gray-600 hover:text-gray-800 transition">
           <Icon icon="ic:baseline-tiktok" />
         </a>
       </div>
@@ -123,6 +115,3 @@ onUnmounted(() => window.clearTimeout(timer))
     </div>
   </section>
 </template>
-
-
-

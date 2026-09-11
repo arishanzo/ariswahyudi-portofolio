@@ -7,7 +7,8 @@ import Skills from './components/Skills.vue'
 import Experience from './components/Experience.vue'
 import Projects from './components/Projects.vue'
 import Footer from './components/Footer.vue'
-
+import SnakeBackground from './components/SnakeBackground.vue'
+import Contact from './components/Contact.vue'
 import { useHead } from '@vueuse/head'
 
 useHead({
@@ -30,29 +31,75 @@ onMounted(() => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible')
+          entry.target.classList.add('animate-in')
+          observer.unobserve(entry.target)
         }
       })
     },
-    { threshold: 0.1 }
+    { threshold: 0.08 }
   )
-
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el))
+  document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el))
 })
 </script>
 
 <template>
-
-   <div class="py-4">
-    <NavBar />
-   </div>
+ 
+  <NavBar />
 
   <main>
-    <Hero />
-    <About />
-    <Skills />
-    <Experience />
-    <Projects />
+    <div data-animate="fade-up">
+       <SnakeBackground />
+      <Hero />
+    </div>
+    <div data-animate="fade-up" style="transition-delay: 0.05s">
+      <About />
+    </div>
+    <div data-animate="fade-up" style="transition-delay: 0.05s">
+      <Skills />
+    </div>
+    <div data-animate="fade-up" style="transition-delay: 0.05s">
+      <Experience />
+    </div>
+    <div data-animate="fade-up" style="transition-delay: 0.05s">
+      <Projects />
+    </div>
+    <div data-animate="fade-up" style="transition-delay: 0.05s">
+      <Contact />
+    </div>
   </main>
   <Footer />
 </template>
+
+<style>
+/* ── Base state: hidden ─────────────────────────────────── */
+[data-animate="fade-up"] {
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1),
+              transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+[data-animate="fade-left"] {
+  opacity: 0;
+  transform: translateX(-48px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1),
+              transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+[data-animate="fade-right"] {
+  opacity: 0;
+  transform: translateX(48px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1),
+              transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+[data-animate="zoom-in"] {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1),
+              transform 0.65s cubic-bezier(0.22,1,0.36,1);
+}
+
+/* ── Visible state ──────────────────────────────────────── */
+[data-animate].animate-in {
+  opacity: 1;
+  transform: none;
+}
+</style>
