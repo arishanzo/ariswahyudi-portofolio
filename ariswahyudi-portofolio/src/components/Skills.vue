@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 
 type Category = 'Frontend' | 'Backend' | 'DevOps & Tools'
 type Skill = { name: string; icon: string; level: number }
