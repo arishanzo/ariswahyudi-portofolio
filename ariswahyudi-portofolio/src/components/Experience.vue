@@ -3,18 +3,18 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const items = [
   {
-    period: 'Desember 2022 - Present',
-    role: 'Founder Developer Kilat',
-    company: 'Devklit Tech',
-    num: '01',
-    desc: 'Initiated projects based on client briefs using Waterfall methodology and CI/CD practices. Developed e-commerce apps integrated with Midtrans payment gateway. Used React.js, Vue.js, Laravel, CodeIgniter, and Express.js.',
-  },
-  {
     period: 'April 2026 - September 2026',
     role: 'Fullstack Developer',
     company: 'PT. Eintio Academic & Technology',
     num: '02',
     desc: 'Developed the company landing page using Next.js focused on performance and UX. Delivered web solutions resulting in 25% increase in project efficiency. Created technical proposals, workflows, and project documentation.',
+},
+  {
+    period: 'April 2023 - Agustus 2024',
+    role: 'Jr. Graphic Design',
+    company: 'Impro Studio',
+    num: '02',
+    desc: 'Designed UI/UX prototypes for web applications using Figma. Conducted market research on design trends using platforms like Envato, Pinterest, and Canva to ensure competitive aesthetics. Collaborated with cross-functional teams using Google Spreadsheets and Notion to streamline project workflows and deliverables',  
   },
   {
     period: 'Februari 2024 - Mei 2024',
