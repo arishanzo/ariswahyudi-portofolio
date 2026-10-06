@@ -6,7 +6,7 @@ const items = [
     period: 'April 2026 - September 2026',
     role: 'Fullstack Developer',
     company: 'PT. Eintio Academic & Technology',
-    num: '02',
+    num: '01',
     desc: 'Developed the company landing page using Next.js focused on performance and UX. Delivered web solutions resulting in 25% increase in project efficiency. Created technical proposals, workflows, and project documentation.',
 },
   {
