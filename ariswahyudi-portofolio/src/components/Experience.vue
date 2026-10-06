@@ -17,14 +17,14 @@ const items = [
     desc: 'Designed UI/UX prototypes for web applications using Figma. Conducted market research on design trends using platforms like Envato, Pinterest, and Canva to ensure competitive aesthetics. Collaborated with cross-functional teams using Google Spreadsheets and Notion to streamline project workflows and deliverables',  
   },
   {
-    period: 'Februari 2024 - Mei 2024',
+    period: 'Februari 2023 - Mei 2023',
     role: 'Internship Web Developer',
     company: 'CV. Caraka Abadi',
     num: '03',
     desc: 'Built an Inventory Management app to digitize stock management, incoming/outgoing goods, and profit-loss calculations. Developed UI using PHP, JavaScript, AJAX, CSS, and CodeIgniter.',
   },
   {
-    period: 'Desember 2021 - April 2022',
+    period: 'Desember 2022 - April 2023',
     role: 'Staff IT',
     company: 'Silmi Fashion',
     num: '04',
